@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Long-running Verification') {
             environment {
-                SONAR_LOGIN = credentials('SONARCLOUD_TOKEN')
+                //SONAR_LOGIN = credentials('SONARCLOUD_TOKEN')
             }
             parallel {
                 stage('Integration Tests') {
@@ -38,7 +38,8 @@ pipeline {
                 }
                 stage('Code Analysis') {
                     steps {
-                        gradlew('sonarqube')
+                        echo 'Running Placeholder for SonarCloud'
+                        //gradlew('sonarqube')
                     }
                 }
             }
@@ -58,11 +59,13 @@ pipeline {
         }
         stage('Deploy to Production') {
             environment {
-                HEROKU_API_KEY = credentials('HEROKU_API_KEY')
+                //HEROKU_API_KEY = credentials('HEROKU_API_KEY')
             }
             steps {
                 unstash 'app'
-                gradlew('deployHeroku')
+                echo 'Running Placeholder for Deployment'
+
+                //gradlew('deployHeroku')
             }
         }
     }

@@ -71,7 +71,7 @@ pipeline {
     }
     post {
         failure {
-            mail to: 'benjamin.muschko@gmail.com', subject: 'Build failed', body: 'Please fix!'
+            mail to: 'prasad.kamini@gmail.com', subject: 'Build failed', body: 'Please fix!'
         }
     }
 }

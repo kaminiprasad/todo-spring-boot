@@ -19,7 +19,7 @@ sonarqube {
 
         property 'sonar.login', System.getenv('SONAR_LOGIN')
 
-        property 'sonar.projectKey' , 'todo-spring-boot-as'
+        property 'sonar.projectKey' , 'kaminiprasad'
 
         properties['sonar.tests'] += sourceSets.integrationTest.java.srcDirs
     }
